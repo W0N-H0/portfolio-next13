@@ -53,11 +53,16 @@ const Header = () => {
         </div>
         <div className="header-info-container">
           <div className="flex md:gap-10 flex-col md:flex-row">
-            <div className="flex gap-1 items-center text-base font-bold">
-              <MdEmail color="red" />
-              <span className="text-dark-blue font-bold">
-                {socialData[1].description}
-              </span>
+            <div className="flex">
+              <a
+                href="mailto:dnjsgh2122@naver.com"
+                className="flex gap-1 items-center text-base font-bold"
+              >
+                <MdEmail color="red" />
+                <span className="text-dark-blue font-bold">
+                  {socialData[1].description}
+                </span>
+              </a>
             </div>
           </div>
           <motion.a
