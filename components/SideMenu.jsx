@@ -89,7 +89,7 @@ const SideMenu = () => {
           transition={{ duration: 0.5 }}
           className={`side-menu border-r`}
         >
-          <div className="flex w-[275px] flex-1 flex-col gap-10 justify-between items-center font-bold ">
+          <div className="flex flex-1 flex-col gap-10 justify-between items-center font-bold ">
             <div className="flex justify-center items-center flex-col gap-2 rounded-full ">
               <Image
                 src="/assets/profile1.jpg"
@@ -108,7 +108,7 @@ const SideMenu = () => {
                     initial={{ x: "-100vw" }}
                     animate={{ x: 0 }}
                     transition={{ duration: link.duration }}
-                    whileHover={{ scale: 1.2 }}
+                    whileHover={{ scale: 1.15 }}
                     key={link.label}
                     href={`${link.route}`}
                     className={`relative flex justify-center items-center rounded-lg p-3 ${
@@ -124,7 +124,7 @@ const SideMenu = () => {
               })}
             </div>
             <div className="flex items-center flex-col justify-center text-center">
-              <div className="flex flex-col lg:flex-row items-center gap-4 mb-3">
+              <div className="flex flex-col lg:flex-row items-center gap-4 mb-3 mx-14">
                 <Socialcons />
               </div>
               <p className="max-md:hidden">Developed by WONHO</p>

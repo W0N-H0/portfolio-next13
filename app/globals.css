@@ -8,7 +8,7 @@ html {
 
 @layer utilities {
   .side-menu {
-    @apply fixed left-0 top-0 z-50 flex h-screen max-w-[300px] flex-col justify-between overflow-auto py-10 px-[10px] bg-[#ffffff];
+    @apply fixed left-0 top-0 z-50 flex h-screen max-w-[300px] flex-col justify-between overflow-auto py-10 px-[10px]  max-lg:max-w-[150px] bg-[#ffffff];
   }
 
   .social-icon {
@@ -17,5 +17,13 @@ html {
 
   .social-icon-description {
     @apply hidden group-hover:block absolute min-w-full whitespace-nowrap top-full left-1/2 transform -translate-x-1/2 bg-dark-blue text-white p-2 my-1 rounded text-sm;
+  }
+
+  .header {
+    @apply max-w-[1250px] m-auto flex flex-col justify-between items-center gap-5;
+  }
+
+  .header-info-container {
+    @apply flex justify-between w-full items-center max-xs:flex-col max-xs:items-start max-xs:gap-2;
   }
 }
