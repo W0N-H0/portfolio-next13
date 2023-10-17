@@ -12,6 +12,10 @@ html {
   }
 
   .social-icon {
-    @apply bg-dark-blue p-2 rounded-full cursor-pointer hover:bg-dark-blue/75;
+    @apply relative bg-dark-blue p-2 rounded-full cursor-pointer hover:bg-dark-blue/75;
+  }
+
+  .social-icon-description {
+    @apply hidden group-hover:block absolute min-w-full whitespace-nowrap top-full left-1/2 transform -translate-x-1/2 bg-dark-blue text-white p-2 my-1 rounded text-sm;
   }
 }

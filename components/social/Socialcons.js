@@ -1,30 +1,19 @@
-import { AiFillGithub, AiFillMail } from "react-icons/ai";
-import { SiTistory } from "react-icons/si";
+import { socialData } from "@/constants/socialData";
 
 const Socialcons = () => {
   return (
     <>
-      <a
-        href="mailto:dnjsgh2122@naver.com"
-        target="_blank"
-        className="social-icon text-white"
-      >
-        <AiFillMail />
-      </a>
-      <a
-        href="https://github.com/WONHO22"
-        target="_blank"
-        className="social-icon text-white"
-      >
-        <AiFillGithub />
-      </a>
-      <a
-        href="https://215-coding.tistory.com/"
-        target="_blank"
-        className="social-icon text-white"
-      >
-        <SiTistory />
-      </a>
+      {socialData.map((item, index) => (
+        <a
+          key={index}
+          href={item.url}
+          target="_blank"
+          className="social-icon text-white group"
+        >
+          {item.icon}
+          <span className="social-icon-description">{item.description}</span>
+        </a>
+      ))}
     </>
   );
 };
