@@ -5,3 +5,13 @@
 html {
   scroll-behavior: smooth;
 }
+
+@layer utilities {
+  .side-menu {
+    @apply fixed left-0 top-0 z-50 flex h-screen max-w-[300px] flex-col justify-between overflow-auto py-10 px-[10px] bg-[#ffffff];
+  }
+
+  .social-icon {
+    @apply bg-dark-blue p-2 rounded-full cursor-pointer hover:bg-dark-blue/75;
+  }
+}
