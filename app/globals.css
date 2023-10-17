@@ -26,4 +26,8 @@ html {
   .header-info-container {
     @apply flex justify-between w-full items-center max-xs:flex-col max-xs:items-start max-xs:gap-2;
   }
+
+  .section-title {
+    @apply bg-dark-red text-white text-sm font-semibold py-3 px-5 uppercase rounded-full flex items-center gap-2;
+  }
 }
