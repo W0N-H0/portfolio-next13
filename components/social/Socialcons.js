@@ -1,10 +1,20 @@
 import { socialData } from "@/constants/socialData";
+import { motion } from "framer-motion";
 
 const Socialcons = () => {
   return (
     <>
       {socialData.map((item, index) => (
-        <a
+        <motion.a
+          initial={{ x: "-100vw" }}
+          animate={{ x: 0 }}
+          transition={{
+            duration: item.duration,
+            type: "spring",
+            stiffness: 500,
+            damping: 15,
+          }}
+          whileHover={{ scale: 1.2 }}
           key={index}
           href={item.url}
           target="_blank"
@@ -12,7 +22,7 @@ const Socialcons = () => {
         >
           {item.icon}
           <span className="social-icon-description">{item.description}</span>
-        </a>
+        </motion.a>
       ))}
     </>
   );

@@ -108,8 +108,10 @@ const SideMenu = () => {
                   <motion.a
                     initial={{ x: "-100vw" }}
                     animate={{ x: 0 }}
-                    transition={{ duration: link.duration }}
-                    whileHover={{ scale: 1.15 }}
+                    transition={{
+                      duration: link.duration,
+                    }}
+                    whileHover={{ scale: 1.2 }}
                     key={link.label}
                     href={`${link.route}`}
                     className={`relative flex justify-center items-center rounded-lg p-3 ${
