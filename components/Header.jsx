@@ -12,6 +12,15 @@ import { socialData } from "@/constants/socialData";
 const Header = () => {
   const { isOpen } = useSelector((store) => store.menuStore);
   const dispatch = useDispatch();
+  const hoverMotion = {
+    transition: {
+      type: "spring",
+      stiffness: 500,
+      damping: 15,
+    },
+    whileHover: { scale: 1.1 },
+  };
+
   return (
     <header
       className="px-[40px] bg-light-bg py-4 z-10 max-xs:px-[20px] "
@@ -54,7 +63,8 @@ const Header = () => {
         <div className="header-info-container">
           <div className="flex md:gap-10 flex-col md:flex-row">
             <div className="flex">
-              <a
+              <motion.a
+                {...hoverMotion}
                 href="mailto:dnjsgh2122@naver.com"
                 className="flex gap-1 items-center text-base font-bold"
               >
@@ -62,14 +72,20 @@ const Header = () => {
                 <span className="text-dark-blue font-bold">
                   {socialData[1].description}
                 </span>
-              </a>
+              </motion.a>
             </div>
           </div>
           <motion.a
             href="../assets/resume.pdf"
             initial={{ x: 300 }}
             animate={{ x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{
+              duration: 0.8,
+              type: "spring",
+              stiffness: 500,
+              damping: 15,
+            }}
+            whileHover={{ scale: 1.1 }}
             target="_blank"
             className="bg-dark-red text-white px-4 py-1 rounded-md hover:bg-light-red flex gap-2 font-bold"
             download

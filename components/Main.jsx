@@ -4,8 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import "@/app/mainAnimations.css";
 import CustomTypewriter from "./typewriter/typewriter";
+import { motion } from "framer-motion";
 
 const Main = () => {
+  const hoverMotion = {
+    transition: {
+      type: "spring",
+      stiffness: 500,
+      damping: 15,
+    },
+    whileHover: { scale: 1.15 },
+  };
+
   return (
     <section className="w-full  h-fit bg-light-bg relative px-[40px] py-16 max-xs:px-[20px]">
       <div className="flex items-center justify-between h-full max-w-[1250px] mx-auto max-md:flex-col max-md:gap-10">
@@ -33,14 +43,20 @@ const Main = () => {
           </div>
           <div className="flex gap-4 max-md:justify-center font-bold">
             <Link href="#projects">
-              <button className="bg-dark-blue text-white px-2 lg:px-4 py-1 rounded-md hover:bg-dark-blue/75 cursor-pointer">
+              <motion.button
+                {...hoverMotion}
+                className="bg-dark-blue text-white px-2 lg:px-4 py-1 rounded-md hover:bg-dark-blue/75 cursor-pointer"
+              >
                 Projects
-              </button>
+              </motion.button>
             </Link>
             <Link href="#contact">
-              <button className="bg-dark-blue text-white px-2 lg:px-4 py-1 rounded-md hover:bg-dark-blue/75 cursor-pointer">
+              <motion.button
+                {...hoverMotion}
+                className="bg-dark-blue text-white px-2 lg:px-4 py-1 rounded-md hover:bg-dark-blue/75 cursor-pointer"
+              >
                 Let&apos;s Talk
-              </button>
+              </motion.button>
             </Link>
           </div>
         </div>
