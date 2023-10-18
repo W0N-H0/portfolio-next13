@@ -2,8 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  cursor: none;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+.cursor {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+  background-color: white;
+  mix-blend-mode: difference;
+  z-index: 999;
+  pointer-events: none;
+  left: -25px;
+  top: -25px;
 }
 
 @layer utilities {
@@ -16,7 +33,7 @@ html {
   }
 
   .social-icon-description {
-    @apply hidden group-hover:block absolute min-w-full whitespace-nowrap top-full left-1/2 transform -translate-x-1/2 bg-dark-blue text-white p-2 my-1 rounded text-sm;
+    @apply hidden group-hover:block absolute min-w-full whitespace-nowrap top-full left-1/2 transform -translate-x-1/2 bg-dark-blue text-white p-2 my-1 rounded text-xs;
   }
 
   .header {
