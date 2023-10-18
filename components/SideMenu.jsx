@@ -92,10 +92,11 @@ const SideMenu = () => {
           <div className="flex flex-1 flex-col gap-10 justify-between items-center font-bold ">
             <div className="flex justify-center items-center flex-col gap-2 rounded-full ">
               <Image
-                src="/assets/profile1.jpg"
-                width={120}
-                height={100}
+                src="/assets/catoonProfile.png"
+                width={150}
+                height={150}
                 alt="profile"
+                className="rounded-lg"
               />
               <p className="text-xl text-dark-blue">LEE WONHO </p>
             </div>

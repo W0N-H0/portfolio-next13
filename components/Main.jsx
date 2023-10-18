@@ -45,11 +45,11 @@ const Main = () => {
           </div>
         </div>
         <Image
-          src="/assets/profile1.jpg"
+          src="/assets/profile.png"
           width={300}
           height={400}
-          alt="profile1"
-          className="z-10 rounded-md"
+          alt="profile"
+          className="z-10 rounded-xl"
         />
       </div>
       {/*Main 부분 배경 도형 렌더링을 위한 요소*/}
