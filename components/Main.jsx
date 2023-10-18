@@ -7,7 +7,7 @@ import CustomTypewriter from "./typewriter/typewriter";
 
 const Main = () => {
   return (
-    <section className="w-full  h-fit bg-light-bg relative px-[40px] py-20 max-xs:px-[20px]">
+    <section className="w-full  h-fit bg-light-bg relative px-[40px] py-16 max-xs:px-[20px]">
       <div className="flex items-center justify-between h-full max-w-[1250px] mx-auto max-md:flex-col max-md:gap-10">
         <div className="flex flex-col gap-5 z-40 max-md:order-2">
           <div className="text-4xl lg:text-6xl">
