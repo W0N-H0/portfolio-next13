@@ -96,7 +96,7 @@ const SideMenu = () => {
             x: isOpen ? 0 : -120,
             opacity: isOpen ? 1 : 0,
           }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.75 }}
           className={`side-menu border-r`}
         >
           <div className="flex flex-1 flex-col gap-10 justify-between items-center font-bold ">
@@ -117,7 +117,7 @@ const SideMenu = () => {
             </Link>
 
             <div>
-              {sidebarMenuLinks.map((link) => {
+              {sidebarMenuLinks.map((link, idx) => {
                 const isActive = activeLink === link;
                 return (
                   <motion.a
@@ -126,7 +126,15 @@ const SideMenu = () => {
                     transition={{
                       duration: link.duration,
                     }}
-                    whileHover={{ scale: 1.2 }}
+                    whileHover={{
+                      scale: 1.2,
+                      transition: {
+                        type: "spring",
+                        stiffness: 500,
+                        damping: 15,
+                        duration: 0.2,
+                      },
+                    }}
                     key={link.label}
                     href={`${link.route}`}
                     className={`relative flex justify-center items-center rounded-lg p-3 ${

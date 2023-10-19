@@ -110,11 +110,21 @@ const Contact = () => {
               Please contact me.
             </p>
             <p className="text-dark-blue mt-12">Email me at:</p>
-            <h4>
-              <a href="#" className="text-lg font-semibold text-dark-blue">
+            <motion.h4
+              whileHover={{ scale: 1.02 }}
+              transition={{
+                type: "spring",
+                stiffness: 500,
+                damping: 15,
+              }}
+            >
+              <a
+                href="mailto:dnjsgh2122@naver.com"
+                className="text-lg font-semibold text-dark-blue"
+              >
                 dnjsgh2122@naver.com
               </a>
-            </h4>
+            </motion.h4>
             <div className="mt-12">
               <div className="flex flex-col gap-2">
                 <h5 className="text-dark-blue">Socials</h5>
