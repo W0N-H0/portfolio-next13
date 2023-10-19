@@ -61,7 +61,7 @@ const Contact = () => {
         toast.dismiss(); // 로딩 토스트 닫기
         toast.error("Email sending failed:", {
           position: "bottom-center",
-          duration: 1500,
+          duration: 1000,
         });
       }
 
@@ -72,7 +72,7 @@ const Contact = () => {
         toast.dismiss(); // 로딩 토스트 닫기
         toast.success("Email sent successfully!", {
           position: "bottom-center",
-          duration: 1500,
+          duration: 1000,
         });
         setFormData({
           name: "",
@@ -83,7 +83,7 @@ const Contact = () => {
     } catch (error) {
       toast.error("Email sending failed:", {
         position: "bottom-center",
-        duration: 1500,
+        duration: 1000,
       });
       console.error("Email sending failed:", error);
     }
