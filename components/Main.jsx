@@ -45,7 +45,7 @@ const Main = () => {
             <Link href="#projects">
               <motion.button
                 {...hoverMotion}
-                className="bg-dark-blue text-white px-2 lg:px-4 py-1 rounded-md hover:bg-dark-blue/75 cursor-pointer"
+                className="bg-dark-blue text-white px-2 lg:px-4 py-2 rounded-md hover:bg-dark-blue/75 cursor-pointer"
               >
                 Projects
               </motion.button>
@@ -53,7 +53,7 @@ const Main = () => {
             <Link href="#contact">
               <motion.button
                 {...hoverMotion}
-                className="bg-dark-blue text-white px-2 lg:px-4 py-1 rounded-md hover:bg-dark-blue/75 cursor-pointer"
+                className="bg-dark-blue text-white px-2 lg:px-4 py-2 rounded-md hover:bg-dark-blue/75 cursor-pointer"
               >
                 Let&apos;s Talk
               </motion.button>
