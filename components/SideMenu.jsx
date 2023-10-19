@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { sidebarMenuLinks } from "@/constants/sidebarMenu";
 import { AnimatePresence, motion } from "framer-motion";
 import Socialcons from "./social/Socialcons";
@@ -13,6 +14,15 @@ const SideMenu = () => {
   const dispatch = useDispatch();
   const { isOpen } = useSelector((store) => store.menuStore);
   const [activeLink, setActiveLink] = useState(sidebarMenuLinks[0]);
+
+  const hoverMotion = {
+    transition: {
+      type: "spring",
+      stiffness: 500,
+      damping: 15,
+    },
+    whileHover: { scale: 1.2 },
+  };
 
   const handleLinkclick = (link) => {
     setActiveLink(link);
@@ -90,16 +100,21 @@ const SideMenu = () => {
           className={`side-menu border-r`}
         >
           <div className="flex flex-1 flex-col gap-10 justify-between items-center font-bold ">
-            <div className="flex justify-center items-center flex-col gap-2 rounded-full ">
-              <Image
-                src="/assets/profile.png"
-                width={100}
-                height={100}
-                alt="profile"
-                className="rounded-lg"
-              />
-              <p className="text-xl text-dark-blue">LEE WONHO </p>
-            </div>
+            <Link href="#home">
+              <motion.div
+                {...hoverMotion}
+                className="flex justify-center items-center flex-col gap-2 rounded-full"
+              >
+                <Image
+                  src="/assets/profile.png"
+                  width={100}
+                  height={100}
+                  alt="profile"
+                  className="rounded-lg"
+                />
+                <p className="text-xl text-dark-blue">LEE WONHO</p>
+              </motion.div>
+            </Link>
 
             <div>
               {sidebarMenuLinks.map((link) => {
