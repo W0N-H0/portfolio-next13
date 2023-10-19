@@ -1,15 +1,5 @@
 "use client";
 
-import {
-  AiFillAccountBook,
-  AiFillFacebook,
-  AiFillGithub,
-  AiFillInstagram,
-  AiFillLinkedin,
-  AiFillTwitterCircle,
-  AiFillWechat,
-  AiFillYoutube,
-} from "react-icons/ai";
 import SectionTitle from "./SectionTitle/SectionTitle";
 import Socialcons from "./social/Socialcons";
 
