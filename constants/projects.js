@@ -11,7 +11,7 @@ export const projects = [
     name: "Portfolio verson.1",
     description: "Nex13을 이용하여 만든 포트폴리오",
     githubUrl: "https://github.com/WONHO22/portfolio-next13",
-    deployUrl: "https://naver.com",
+    deployUrl: "https://portfolio-next13-mu.vercel.app/",
   },
   {
     image: "../assets/projects/lunchRecommendation.png",

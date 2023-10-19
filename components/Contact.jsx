@@ -34,8 +34,9 @@ const Contact = () => {
   const sendEmail = async (e) => {
     e.preventDefault(); // 새로고침 방지
 
-    // 서버 엔드포인트 URL 설정
-    const endpoint = "http://localhost:8081/mailsend";
+    // 서버 엔드포인트 URL 설정 (서버 배포주소)
+    const endpoint =
+      "https://port-0-portfolio-next13-12fhqa2blnxd6ofg.sel5.cloudtype.app/mailsend";
 
     // 통신 시작 시 로딩 토스트 표시
     showLoadingToast();
