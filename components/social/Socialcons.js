@@ -17,7 +17,7 @@ const Socialcons = () => {
           whileHover={{ scale: 1.2 }}
           key={index}
           href={item.url}
-          target="_blank"
+          target={item.type === "email" ? "" : "_blank"}
           className="social-icon text-white group"
         >
           {item.icon}

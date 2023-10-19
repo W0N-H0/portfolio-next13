@@ -12,7 +12,7 @@ export const socialData = [
   {
     type: "email",
     icon: <AiFillMail />,
-    url: "mailto:dnjsgh2122@naver.com",
+    url: "#contact",
     description: "dnjsgh2122@naver.com",
     duration: 0.5,
   },
