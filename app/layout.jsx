@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import { store } from "@/store/useMenuStore";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useEffect } from "react";
+import { Toaster } from "react-hot-toast";
 
 const font = Gowun_Batang({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -58,6 +59,7 @@ export default function RootLayout({ children }) {
     <html>
       <body className={font.className}>
         <Provider store={store}>
+          <Toaster />
           <motion.div
             className="cursor"
             style={{
