@@ -1,4 +1,6 @@
 "use client";
+import ProjectCard from "./ProjectCard";
+import { projects } from "@/constants/projects";
 import SectionTitle from "./SectionTitle/SectionTitle";
 
 const Projects = () => {
@@ -9,7 +11,19 @@ const Projects = () => {
     >
       <div className="max-w-[1250px] m-auto">
         <SectionTitle title={"Projects"} />
-        <div>프로젝트 섹션입니다.</div>
+
+        <div className="grid grid-cols-1 gap-4 mt-4">
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              name={project.name}
+              githubUrl={project.githubUrl}
+              image={project.image}
+              deployUrl={project.deployUrl}
+              order={index + 1}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
