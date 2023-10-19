@@ -56,6 +56,15 @@ const Contact = () => {
         body: JSON.stringify(data),
       });
 
+      if (!response.ok) {
+        // HTTP 응답이 실패한 경우
+        toast.dismiss(); // 로딩 토스트 닫기
+        toast.error("Email sending failed:", {
+          position: "bottom-center",
+          duration: 1500,
+        });
+      }
+
       const result = await response.json();
 
       // 메일을 보낸 후에 formData를 초기화합니다.

@@ -28,6 +28,9 @@ router.post("/mailsend", (req, res, next) => {
     // 이메일 발송
     if (error) {
       console.log(error); // 실패(에러)
+      res
+        .status(500)
+        .json({ status: "error", message: "Email sending failed" }); // 에러 응답을 클라이언트에 전달
     } else {
       console.log("이메일 발송에 성공했습니다: " + info.response); // 성공
       res.status(200).json({ status: "success" }); // 성공 응답을 클라이언트에 전달
