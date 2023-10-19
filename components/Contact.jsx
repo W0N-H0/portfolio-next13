@@ -2,8 +2,17 @@
 
 import SectionTitle from "./SectionTitle/SectionTitle";
 import Socialcons from "./social/Socialcons";
+import { motion } from "framer-motion";
 
 const Contact = () => {
+  const hoverMotion = {
+    transition: {
+      type: "spring",
+      stiffness: 500,
+      damping: 15,
+    },
+    whileHover: { scale: 1.15 },
+  };
   const sendEmail = (e) => {
     e.preventDefault();
   };
@@ -68,12 +77,13 @@ const Contact = () => {
                 />
               </div>
               <div className="flex justify-start">
-                <button
+                <motion.button
+                  {...hoverMotion}
                   type="submit"
-                  className="transition-all duration-150  rounded-lg py-3 px-6 text-white bg-dark-red hover:shadow-lg hover:bg-dark-red/75 font-bold text-lg"
+                  className="rounded-lg py-3 px-6 text-white bg-dark-red hover:shadow-lg hover:bg-dark-red/75 font-bold text-lg"
                 >
                   submit
-                </button>
+                </motion.button>
               </div>
             </form>
           </div>
