@@ -103,16 +103,22 @@ const SideMenu = () => {
             <Link href="#home">
               <motion.div
                 {...hoverMotion}
-                className="flex justify-center items-center flex-col gap-2 rounded-full"
+                className="flex justify-center items-center flex-col gap-0 rounded-full"
               >
                 <Image
-                  src="/assets/profile.png"
-                  width={100}
-                  height={100}
+                  src="/assets/logo2.png"
+                  width={130}
+                  height={200}
                   alt="profile"
-                  className="rounded-lg"
+                  className="rounded-md"
                 />
-                <p className="text-xl text-dark-blue">LEE WONHO</p>
+
+                <p className="text-xl text-dark-blue tracking-[0.2em]">
+                  WONHO&apos;S
+                </p>
+                <p className="text-lg text-dark-blue tracking-[0.2em]">
+                  PORTFOLIO
+                </p>
               </motion.div>
             </Link>
 
