@@ -42,13 +42,14 @@ const About = () => {
               animate={{ x: isInView2 ? 0 : "-30vw" }}
               transition={{ duration: 0.9 }}
             >
-              {/*클릭시 프로젝트 섹션으로 이동하도록 수정** */}
-              <div className="w-full text-center py-[30px] md:py-[60px] rounded-md bg-light-bg">
-                <h3 className="text-[40px] mb-[3px] text-dark-red font-bold">
-                  4+
-                </h3>
-                <span className="uppercase"> Projects</span>
-              </div>
+              <a href="#projects">
+                <div className="w-full text-center py-[30px] md:py-[60px] rounded-md bg-light-bg">
+                  <h3 className="text-[40px] mb-[3px] text-dark-red font-bold">
+                    4+
+                  </h3>
+                  <span className="uppercase"> Projects</span>
+                </div>
+              </a>
             </motion.li>
             <motion.li
               className="w-full shadow-sm"
