@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import SectionTitle from "./SectionTitle/SectionTitle";
 import { motion, useInView } from "framer-motion";
 
@@ -8,6 +8,9 @@ const About = () => {
   const ref2 = useRef(null);
   const isInView = useInView(ref);
   const isInView2 = useInView(ref2);
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [isFlipped2, setIsFlipped2] = useState(false);
+
   return (
     <section
       className="w-full h-fit px-[40px] py-10 max-xs:px-[20px] relative bg-white"
@@ -38,31 +41,59 @@ const About = () => {
           <ul className="flex justify-between flex-col gap-5 md:flex-row">
             <motion.li
               className="w-full shadow-sm"
-              initial={{ x: "-30vw" }}
-              animate={{ x: isInView2 ? 0 : "-30vw" }}
-              transition={{ duration: 0.9 }}
+              initial={{ x: "-30vw", rotateY: 0 }}
+              animate={{
+                x: isInView2 ? 0 : "-30vw",
+                rotateY: isFlipped ? 180 : 0,
+              }}
+              transition={{ duration: 1.2 }}
+              onMouseEnter={() => setIsFlipped(true)}
+              onMouseLeave={() => setIsFlipped(false)}
             >
               <a href="#projects">
-                <div className="w-full text-center py-[30px] md:py-[60px] rounded-md bg-light-bg">
-                  <h3 className="text-[40px] mb-[3px] text-dark-red font-bold">
-                    4+
+                <div
+                  className="w-full text-center py-[30px] md:py-[60px] rounded-md bg-light-bg"
+                  style={{
+                    transform: isFlipped ? "rotateY(180deg)" : "rotateY(0)",
+                  }}
+                >
+                  <h3 className="text-[40px] mb-[3px] text-dark-red font-bold tracking-[0.2em]">
+                    {isFlipped ? " CLICK " : "4+"}
                   </h3>
-                  <span className="uppercase"> Projects</span>
+                  <span className="uppercase">
+                    <span className="uppercase">
+                      {isFlipped ? <> SHOW Projects List</> : "Projects"}
+                    </span>
+                  </span>
                 </div>
               </a>
             </motion.li>
             <motion.li
               className="w-full shadow-sm"
-              initial={{ x: "-30vw" }}
-              animate={{ x: isInView2 ? 0 : "-30vw" }}
-              transition={{ duration: 0.6 }}
+              initial={{ x: "-30vw", rotateY: 0 }}
+              animate={{
+                x: isInView2 ? 0 : "-30vw",
+                rotateY: isFlipped2 ? 180 : 0,
+              }}
+              transition={{ duration: 1.2 }}
+              onMouseEnter={() => setIsFlipped2(true)}
+              onMouseLeave={() => setIsFlipped2(false)}
             >
-              <div className="w-full text-center py-[30px] md:py-[60px] rounded-md bg-light-bg">
+              <div
+                className="w-full text-center py-[30px] md:py-[60px] rounded-md bg-light-bg "
+                style={{
+                  transform: isFlipped2 ? "rotateY(180deg)" : "rotateY(0)",
+                }}
+              >
                 <h3 className="text-[40px] mb-[3px] text-dark-red font-bold">
-                  BootCamp Certificate
+                  {isFlipped2
+                    ? "Business Administration"
+                    : "BootCamp Certificate"}
                 </h3>
                 <span className="uppercase">
-                  software engineering - CodeState
+                  {isFlipped2
+                    ? "Hankuk University of Foreign Studies"
+                    : "software engineering - CodeState"}
                 </span>
               </div>
             </motion.li>
