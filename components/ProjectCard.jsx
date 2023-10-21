@@ -27,7 +27,7 @@ const ProjectCard = ({ name, githubUrl, image, deployUrl, order }) => {
       initial={{ y: "-10vh" }}
       animate={{ y: isInView ? 0 : "-10vh" }}
       transition={{ duration: 0.5 }}
-      className="mb-4 p-4 border border-gray-200 rounded-lg shadow-md bg-light-bg"
+      className="flex flex-col mb-4 p-4 border border-gray-200 rounded-lg shadow-md bg-light-bg"
     >
       <div className="w-full h-[86%] rounded-md shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
         <img

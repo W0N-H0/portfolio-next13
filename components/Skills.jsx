@@ -28,7 +28,7 @@ const Skills = () => {
             <h2 className="text-xl font-bold mb-2 mt-2 py-2 px-1 text-shadow">
               - {category.category}
             </h2>
-            <div className="grid grid-cols-5 gap-3">
+            <div className="grid grid-cols-3 xs:grid-cols-5 gap-3">
               {category.items.map((item) => (
                 <motion.div
                   transition={{
@@ -38,7 +38,7 @@ const Skills = () => {
                   }}
                   whileHover={{ scale: 1.1 }}
                   key={item.id}
-                  className="p-4 rounded-md text-center flex flex-col items-center hover:shadow-2xl justify-center"
+                  className="p-4 rounded-md text-center flex flex-col items-center hover:shadow-2xl justify-start"
                 >
                   {item.src ? (
                     <img
