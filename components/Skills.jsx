@@ -40,10 +40,18 @@ const Skills = () => {
                   key={item.id}
                   className="p-4 rounded-md text-center flex flex-col items-center hover:shadow-2xl justify-center"
                 >
-                  <item.icon
-                    className="text-6xl"
-                    style={{ color: item.color }}
-                  />
+                  {item.src ? (
+                    <img
+                      src={item.src}
+                      alt={item.title}
+                      className="w-[60px] rounded-md"
+                    />
+                  ) : (
+                    <item.icon
+                      className="text-6xl"
+                      style={{ color: item.color }}
+                    />
+                  )}
                   <span className="font-bold">{item.title}</span>
                 </motion.div>
               ))}

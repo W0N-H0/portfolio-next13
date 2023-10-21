@@ -58,6 +58,7 @@ export const skills = [
         color: "#facc15",
         icon: SiStyledcomponents,
         title: "Styled Components",
+        src: "/assets/styledcomponents.png",
       },
       {
         id: v4(),
