@@ -7,15 +7,19 @@ const CustomTypewriter = () => {
         options={{
           autoStart: true,
           loop: true,
-          pauseFor: 1000,
+          delay: 90,
         }}
         onInit={(typewriter) => {
           typewriter
             .typeString(" a Front-end Developer")
-            .deleteAll()
+            .pauseFor(900)
+            .deleteAll(15)
             .typeString(" a communicative Developer")
-            .deleteAll()
+            .pauseFor(900)
+            .deleteAll(15)
             .typeString(" a lifelong learner Developer")
+            .pauseFor(900)
+            .deleteAll(15)
             .start();
         }}
       />
