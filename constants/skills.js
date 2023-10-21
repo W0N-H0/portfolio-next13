@@ -40,12 +40,13 @@ export const skills = [
       { id: v4(), color: "#3b82f6", icon: TbBrandNextjs, title: "Next.js" },
       { id: v4(), color: "#166534", icon: BiLogoNodejs, title: "Node.js" },
       { id: v4(), color: "#3b82f6", icon: SiExpress, title: "Express" },
-      { id: v4(), color: "#3b82f6", icon: SiReactquery, title: "React Query" },
+      { id: v4(), color: "#ff4154", icon: SiReactquery, title: "React Query" },
     ],
   },
   {
     category: "State Management",
     items: [
+      { id: v4(), color: "#764abc", icon: BiLogoRedux, title: "Redux" },
       { id: v4(), color: "#764abc", icon: BiLogoRedux, title: "Redux Toolkit" },
       { id: v4(), color: "#3b82f6", icon: SiPreact, title: "Context API" },
     ],

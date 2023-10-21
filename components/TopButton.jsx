@@ -38,7 +38,7 @@ const TopButton = () => {
       }`}
     >
       <a href="#home">
-        <BiUpArrow color="white" size={"20px"} />
+        <BiUpArrow color="white" size={"25px"} />
       </a>
     </motion.div>
   );

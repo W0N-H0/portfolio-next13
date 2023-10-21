@@ -29,11 +29,11 @@ const ProjectCard = ({ name, githubUrl, image, deployUrl, order }) => {
       transition={{ duration: 0.5 }}
       className="mb-4 p-4 border border-gray-200 rounded-lg shadow-md bg-light-bg"
     >
-      <div className="w-full overflow-hidden">
+      <div className="w-full h-[86%] rounded-md shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
         <img
           src={image}
           alt={`${name} Image`}
-          className="mb-2 rounded"
+          className="mb-2 rounded-md"
           style={{ objectFit: "fill" }}
         />
       </div>

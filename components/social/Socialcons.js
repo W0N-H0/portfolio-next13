@@ -14,7 +14,7 @@ const Socialcons = () => {
             stiffness: 500,
             damping: 15,
           }}
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.3 }}
           key={index}
           href={item.url}
           target={item.type === "email" ? "" : "_blank"}
