@@ -5,6 +5,13 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import TopButton from "@/components/TopButton";
 import Contact from "@/components/Contact";
+import icon from "/public/assets/wepicon.png";
+
+export const metadata = {
+  title: "Wonho`s Portfolio",
+  description: "Made by WONHO LEE",
+  icons: [{ rel: "icon", url: icon.src }],
+};
 
 const Home = () => {
   return (
