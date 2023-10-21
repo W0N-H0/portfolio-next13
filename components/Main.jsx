@@ -20,20 +20,20 @@ const Main = () => {
     <section className="w-full  h-fit bg-light-bg relative px-[40px] py-16 max-xs:px-[20px]">
       <div className="flex items-center justify-between h-full max-w-[1250px] mx-auto max-md:flex-col max-md:gap-10">
         <div className="flex flex-col gap-5 z-40 max-md:order-2">
-          <div className="text-4xl lg:text-6xl">
+          <div className="text-4xl xl:text-6xl">
             <h1> Hi, I&apos;m WONHO </h1>
 
             <span className="font-bold text-dark-red">
               <CustomTypewriter />
             </span>
             <div className="flex">
-              <h2>from Korea</h2>
+              <h2 className="pt-2 xl:pt-0">from Korea</h2>
               <Image
                 src="/assets/koreaflag.png"
                 width={80}
                 height={70}
                 alt="koreaflag"
-                className="z-10 ml-4 pt-1"
+                className="z-10 ml-4 xl:pt-1 "
               />
             </div>
             <p className="mt-5 text-xl">
