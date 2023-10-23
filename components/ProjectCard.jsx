@@ -63,7 +63,7 @@ const ProjectCard = ({
           damping: 15,
         }}
         whileHover={{ scale: 1.1 }}
-        className="flex mx-2 mb-2 py-2  bg-dark-blue rounded-md text-white font-bold w-[180px] justify-center"
+        className="flex mb-2 py-2  bg-dark-blue rounded-md text-white font-bold w-[180px] justify-center"
         onClick={handleShowDetail}
       >
         {showDetail ? (
