@@ -20,6 +20,8 @@ const Projects = () => {
               githubUrl={project.githubUrl}
               image={project.image}
               deployUrl={project.deployUrl}
+              body={project.body}
+              detail={project.detail}
               order={index + 1}
             />
           ))}
