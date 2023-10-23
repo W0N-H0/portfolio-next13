@@ -33,7 +33,7 @@ const ProjectCard = ({ name, githubUrl, image, deployUrl, order }) => {
         <img
           src={image}
           alt={`${name} Image`}
-          className="mb-2 rounded-md"
+          className="rounded-md"
           style={{ objectFit: "fill" }}
         />
       </div>

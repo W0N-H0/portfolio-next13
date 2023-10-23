@@ -21,18 +21,33 @@ const About = () => {
         <div className="mt-7">
           <motion.div
             ref={ref}
-            className="mt-6 text-gray-800 text--[20px] leading-10 text-justify font-bold"
+            className="mt-6 text-gray-800 text-[16px] leading-10 text-justify font-bold"
             initial={{ x: "-20vw" }}
             animate={{ x: isInView ? 0 : "-20vw" }}
             transition={{ duration: 1 }}
           >
-            안녕하세요🙇 주도적인 자세로 문제를 해결해 나가는 프론트엔드 개발자
-            이원호입니다. <br />
+            <p className="text-[20px] mb-2">
+              안녕하세요! 주도적인 자세로 문제를 해결해 나가는 프론트엔드 개발자
+              <span className=" ml-2">이원호</span>
+              입니다.
+            </p>
+            <p>
+              경영학부를 졸업하고, 채권관리 금융회사에서 사이드 업무로 회사
+              홈페이지 업무를 담당하며, 유저의 관점에서 웹을 관리하고 개선했던
+              경험을 통해 웹 개발에 대해 흥미를 갖게 되었습니다.
+            </p>
+            <p className="mb-2">
+              이후 UI/UX를 직접 구축해 보고 싶은 열정이 생겨 프론트엔드 개발에
+              입문하였고, 현재까지 JavaScript 언어와 React.js, Next.js를
+              기반으로 프로젝트를 진행한 경험이 있습니다.
+            </p>
             다양한 기능을 고민해보고 구현해 나가는 과정을 즐기는 개발자입니다.
-            새로운 지식을 습득하는 과정을 기록하며 스스로의 성장을 인지하고 더
-            많은 동기부여를 얻고 있습니다.
-            <br /> 상대방의 생각을 공유하고 커뮤니케이션하며, 함께 일하고 하고
-            싶은 개발자가 되고 싶습니다.
+            개발 과정에서 직면한 다양한 문제를 해결하고 새로운 지식을 습득하는
+            과정속에서 스스로의 성장을 이루어 나가며, 이를 통해 더 많은
+            동기부여를 얻고 있습니다.
+            <br /> 앞으로도 끊임없이 관찰하고 고민하는 개발자의 여정에 있어서,
+            항상 배움을 소중히 여기는 자세를 바탕으로 성장해 나갈 목표를 가지고
+            있습니다.
           </motion.div>
         </div>
       </div>
@@ -46,7 +61,7 @@ const About = () => {
                 x: isInView2 ? 0 : "-30vw",
                 rotateY: isFlipped ? 180 : 0,
               }}
-              transition={{ duration: 1.2 }}
+              transition={{ duration: 0.6 }}
               onMouseEnter={() => setIsFlipped(true)}
               onMouseLeave={() => setIsFlipped(false)}
             >
@@ -75,7 +90,7 @@ const About = () => {
                 x: isInView2 ? 0 : "-30vw",
                 rotateY: isFlipped2 ? 180 : 0,
               }}
-              transition={{ duration: 1.2 }}
+              transition={{ duration: 0.6 }}
               onMouseEnter={() => setIsFlipped2(true)}
               onMouseLeave={() => setIsFlipped2(false)}
             >
