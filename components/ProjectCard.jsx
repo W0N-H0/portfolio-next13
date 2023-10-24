@@ -21,6 +21,7 @@ const ProjectCard = ({
   order,
   body,
   detail,
+  skills,
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -58,12 +59,8 @@ const ProjectCard = ({
       <h3 className="my-4 text-dark-blue font-bold text-xl">{` ${order}. ${name}`}</h3>
       <div className="mb-2" dangerouslySetInnerHTML={{ __html: body }}></div>
       <motion.button
-        transition={{
-          type: "spring",
-          stiffness: 500,
-          damping: 15,
-        }}
-        whileHover={{ scale: 1.1 }}
+        {...hoverMotion}
+        whileHover={{ ...hoverMotion.whileHover, scale: 1.1 }}
         className="flex mb-2 py-2  bg-dark-blue rounded-md text-white font-bold w-[180px] justify-center"
         onClick={handleShowDetail}
       >
@@ -92,11 +89,26 @@ const ProjectCard = ({
               className="border-[2px] rounded-md shadow-sm"
               dangerouslySetInnerHTML={{ __html: detail }}
             />
+            <div className="flex flex-wrap mt-4">
+              {skills &&
+                skills.map((skill, index) => {
+                  return (
+                    <motion.span
+                      {...hoverMotion}
+                      whileHover={{ ...hoverMotion.whileHover, scale: 1.1 }}
+                      key={index}
+                      className="p-2 mr-2 mb-2 bg-dark-blue text-white rounded-md"
+                    >
+                      {skill}
+                    </motion.span>
+                  );
+                })}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      <div className="flex gap-2 items-center w-full mt-2">
+      <div className="flex gap-2 items-center w-full mt-1">
         <motion.a
           {...hoverMotion}
           href={githubUrl}

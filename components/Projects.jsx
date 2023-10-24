@@ -24,6 +24,7 @@ const Projects = () => {
               body={project.body}
               detail={project.detail}
               order={index + 1}
+              skills={project.skills}
             />
           ))}
         </div>
