@@ -8,7 +8,7 @@ export const projects = [
     githubUrl: "https://github.com/codestates-seb/seb45_main_027",
     deployUrl: "https://bbibbiapp.click",
     body: `<span class="p-2">인테리어에 관심있는 사용자들을 위한 다기능 온라인 커뮤니티 프로젝트 입니다. </span>`,
-    detail: `<div class="p-2">
+    detail: `<div class="p-4">
     <div class="mb-3">
       <h1>▷ 개발기간</h1>
       <span class="p-2"> 2023.8.24 ~ 2023.9.22 </span>
@@ -124,7 +124,7 @@ export const projects = [
     deployUrl: "https://portfolio-next13-mu.vercel.app/",
     body: `<span class="p-2">SEO 성능 향상을 위해 Next.js 13을 사용하여 개발한 포트폴리오 사이트입니다. </span>`,
     detail: `
-    <div class="p-2">
+    <div class="p-4">
     <div class="mb-3">
       <h1>▷ 프로젝트 소개</h1>
       <span class="p-2">
@@ -221,7 +221,7 @@ export const projects = [
     deployUrl: "https://lunch-recomandation-8jjqva17b-wonho22.vercel.app/",
     body: `<span class="p-2">오늘은 뭘 먹어야 할지 고민이라면?, 늘 먹는 음식이 정해져있다면?, 색다른 음식이 먹고 싶다면? 선택한 지역을 바탕으로 음식 메뉴 추천을 해주는 랜덤 룰렛 사이트 프로젝트 입니다. </span>`,
     detail: `
-    <div class="p-2">
+    <div class="p-4">
       <div class="mb-3">
         <h1>▷ 프로젝트 소개</h1>
         <span class="p-2">
@@ -291,7 +291,7 @@ export const projects = [
       "http://stackoverflow-client.s3-website.ap-northeast-2.amazonaws.com/",
     body: `<span class="p-2">스택오버플로우 웹 클론 프로젝트 입니다. </span>`,
     detail: `
-    <div class="p-2">
+    <div class="p-4">
       <div class="mb-3">
         <h1>▷ 개발기간</h1>
         <span class="p-2"> 2023.8.9 ~ 2023.8.23 </span>
