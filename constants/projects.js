@@ -3,7 +3,8 @@ export const projects = [
     image: "../assets/projects/BiBi2.png",
     name: "삐삐 (BIBI .Best interior)",
     description: "인테리어 정보 공유 커뮤니티",
-    youtubeUrl: "https://www.youtube.com/",
+    youtubeUrl:
+      "https://www.youtube.com/watch?v=cSNM6G58QpM&list=PLmose1-7dgU-oAV-SryQNeRDH8FoAVITj&index=2&ab_channel=BIBI%28Bestinterior%29",
     githubUrl: "https://github.com/codestates-seb/seb45_main_027",
     deployUrl: "https://bbibbiapp.click",
     body: `<span class="p-2">인테리어에 관심있는 사용자들을 위한 다기능 온라인 커뮤니티 프로젝트 입니다. </span>`,
@@ -102,14 +103,16 @@ export const projects = [
       <br />
     </div>
 
-    <div class="mb-3">
+    <div class="mb-1">
       <h1>▷ 기타 사항</h1>
       <span class="p-2">- 약 33개 팀과의 경쟁에서 Top5 인기상 수상</span>
       <br />
       <span class="p-2 line-through text-dark-red">
-        - AWS 과금 이슈로 서버 Close
+        - AWS 과금 이슈로 서버 Close 
       </span>
-      <br />
+      <span class="p-2 font-bold">
+      => Youtube 시연 영상 링크로 체험해보실 수 있습니다.
+      </span>
     </div>
   </div>`,
   },
@@ -201,7 +204,7 @@ export const projects = [
       <br />
     </div>
 
-    <div class="mb-3">
+    <div class="mb-1">
       <h1>▷ 배포 과정</h1>
       <span class="p-2">- 클라이언트 : vercel</span>
       <br />
@@ -270,7 +273,7 @@ export const projects = [
         </a>
       </div>
 
-      <div class="mb-3">
+      <div class="mb-1">
         <h1>▷ 배포 과정</h1>
         <span class="p-2">- 클라이언트 : vercel</span>
         <br />
@@ -281,11 +284,64 @@ export const projects = [
   },
   {
     image: "../assets/projects/stackoverflowClone.png",
-    name: "스텍오버플로우 클론코딩",
+    name: "스택오버플로우 클론코딩",
     description: "StackOverFlow Clone Coading",
     githubUrl: "https://github.com/codestates-seb/seb45_pre_006",
     deployUrl:
       "http://stackoverflow-client.s3-website.ap-northeast-2.amazonaws.com/",
-    body: `<span class="p-2">스텍오버플로우 웹 클론 프로젝트 입니다. </span>`,
+    body: `<span class="p-2">스택오버플로우 웹 클론 프로젝트 입니다. </span>`,
+    detail: `
+    <div class="p-2">
+      <div class="mb-3">
+        <h1>▷ 개발기간</h1>
+        <span class="p-2"> 2023.8.9 ~ 2023.8.23 </span>
+      </div>
+
+      <div class="mb-3">
+        <h1>▷ 주요 기능</h1>
+        <span class="p-2 m-1">
+          - JWT를 이용한 회원 가입 / 로그인 구현
+          <br />
+        </span>
+        <span class="p-2 m-1">
+          - 회원정보 CRUD 구현, 질문 리스트 조회 기능 구현
+          <br />
+        </span>
+        <span class="p-2 m-1">
+          - 웹 에디터를 사용하여 질문, 답변 CRUD 구현
+          <br />
+          <span class="p-2 m-1">
+            - 질문의 댓글, 답변의 댓글 CRUD 구현
+            <br />
+          </span>
+        </span>
+        <span class="p-2 m-1">
+          - Paging 구현(질문리스트: 무한스크롤, 답변 목록: Pagination)
+          <br />
+        </span>
+        <span class="p-2 m-1">- 게시물(질문) 검색 기능 구현</span>
+      </div>
+
+      <div class="mb-3">
+        <h1>▷ 배운점</h1>
+        <span class="p-2">
+          - 프로젝트 설계에서부터 요구사항 정의서, 테이블 명세서, API명세서 등을
+          문서화 하면서 프로젝트를 전체적으로 그려보는 경험을 할 수 있었습니다.
+        </span>
+        <br />
+        <span class="p-2">
+          - RESTful한 API 설계를 통해 커뮤니티 CRUD 에 대한 경험을 할 수
+          있었습니다.
+        </span>
+      </div>
+
+      <div class="mb-1">
+        <h1>▷ 배포 과정</h1>
+        <span class="p-2">- 클라이언트 : AWS S3</span>
+        <br />
+        <span class="p-2"> - 서버 : AWS EC2</span> <br />
+      </div>
+    </div>
+    `,
   },
 ];

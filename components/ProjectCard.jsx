@@ -96,7 +96,7 @@ const ProjectCard = ({
         )}
       </AnimatePresence>
 
-      <div className="flex gap-2 items-center w-full ">
+      <div className="flex gap-2 items-center w-full mt-2">
         <motion.a
           {...hoverMotion}
           href={githubUrl}
