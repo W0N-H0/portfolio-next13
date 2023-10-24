@@ -12,7 +12,7 @@ const Projects = () => {
       <div className="max-w-[1250px] m-auto">
         <SectionTitle title={"Projects"} />
 
-        <div className="grid grid-cols-1 gap-4 mt-4">
+        <div className="grid grid-cols-1 gap-4 mt-8">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
@@ -20,6 +20,7 @@ const Projects = () => {
               githubUrl={project.githubUrl}
               image={project.image}
               deployUrl={project.deployUrl}
+              youtubeUrl={project.youtubeUrl}
               body={project.body}
               detail={project.detail}
               order={index + 1}

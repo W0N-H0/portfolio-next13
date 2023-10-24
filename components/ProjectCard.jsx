@@ -7,6 +7,7 @@ import {
   AiOutlineSearch,
 } from "react-icons/ai";
 import { GoEyeClosed } from "react-icons/go";
+import { TbBrandYoutubeFilled } from "react-icons/tb";
 
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
@@ -16,6 +17,7 @@ const ProjectCard = ({
   githubUrl,
   image,
   deployUrl,
+  youtubeUrl,
   order,
   body,
   detail,
@@ -23,7 +25,6 @@ const ProjectCard = ({
   const ref = useRef(null);
   const isInView = useInView(ref);
   const [showDetail, setShowDetail] = useState(false);
-  console.log(showDetail);
 
   const handleShowDetail = () => {
     setShowDetail(!showDetail);
@@ -87,7 +88,10 @@ const ProjectCard = ({
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div dangerouslySetInnerHTML={{ __html: detail }} />
+            <div
+              className="border-[2px] rounded-md shadow-sm"
+              dangerouslySetInnerHTML={{ __html: detail }}
+            />
           </motion.div>
         )}
       </AnimatePresence>
@@ -112,6 +116,18 @@ const ProjectCard = ({
           <AiFillChrome className="text-3xl" />
           <span className="social-icon-description2">Deploy Link</span>
         </motion.a>
+
+        {youtubeUrl ? (
+          <motion.a
+            {...hoverMotion}
+            href={youtubeUrl}
+            target="_blank"
+            className="relative text-dark-blue hover:underline text-xl group ml-1"
+          >
+            <TbBrandYoutubeFilled className="text-3xl" />
+            <span className="social-icon-description2">Youtube Link</span>
+          </motion.a>
+        ) : null}
       </div>
     </motion.div>
   );
