@@ -59,6 +59,7 @@ const ProjectCard = ({
           className="rounded-md"
           height={800}
           width={1400}
+          quality={100}
         />
       </div>
       <h3 className="my-4 text-dark-blue font-bold text-xl">{` ${order}. ${name}`}</h3>

@@ -3,11 +3,11 @@ import { skills } from "@/constants/skills";
 import React, { useRef } from "react";
 import SectionTitle from "./SectionTitle/SectionTitle";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 
 const Skills = () => {
   const ref2 = useRef(null);
   const isInView2 = useInView(ref2);
-
   return (
     <section
       className="w-full h-fit px-5 py-10 max-xs:px-[20px] relative bg-white"
@@ -41,10 +41,13 @@ const Skills = () => {
                   className="p-4 rounded-md text-center flex flex-col items-center hover:shadow-2xl justify-start"
                 >
                   {item.src ? (
-                    <img
+                    <Image
                       src={item.src}
                       alt={item.title}
-                      className="w-[60px] rounded-md"
+                      className="rounded-md"
+                      width={60}
+                      height={60}
+                      sizes="(min-width: 60px)"
                     />
                   ) : (
                     <item.icon
