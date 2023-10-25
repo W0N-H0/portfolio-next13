@@ -2,10 +2,48 @@ var express = require("express");
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 var router = express.Router();
+const axios = require("axios");
+const fs = require("fs");
+var path = require("path");
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
+router.get("/", (req, res, next) => {
   res.render("index", { title: "Express" });
+});
+
+// 이력서 다운로드 로직
+router.get("/download-resume", async (req, res) => {
+  try {
+    // 원격 파일의 URL(resume 저장공간)
+    const fileUrl =
+      "https://blog.kakaocdn.net/dn/brOMZ1/btszbgaGcg3/qTfCkX7lzF3LoLkTTbfuZ1/resume.pdf?attach=1&knm=tfile.pdf";
+
+    // 파일 다운로드
+    const response = await axios.get(fileUrl, { responseType: "stream" });
+
+    // 다운로드한 파일을 저장할 임시 파일 경로
+    const tempFilePath = path.join(__dirname, "temp", "temp_resume.pdf");
+
+    const writer = fs.createWriteStream(tempFilePath);
+    response.data.pipe(writer);
+
+    writer.on("finish", () => {
+      // 파일 다운로드가 완료되면 클라이언트로 전송
+      res.download(tempFilePath, "resume.pdf", (err) => {
+        if (err) {
+          // 오류 처리
+          console.error(err);
+          res.status(500).send("다운로드 중 오류가 발생했습니다.");
+        } else {
+          // 임시 파일 삭제
+          fs.unlinkSync(tempFilePath);
+        }
+      });
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("파일을 다운로드하는 동안 오류가 발생했습니다.");
+  }
 });
 
 router.post("/mailsend", (req, res, next) => {
