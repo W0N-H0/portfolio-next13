@@ -49,13 +49,13 @@ const SideMenu = () => {
       setActiveLink(sidebarMenuLinks[1]);
     }
 
-    if (scrollY > 850 && scrollY < 1200) {
+    if (scrollY > 850 && scrollY < 1450) {
       setActiveLink(sidebarMenuLinks[2]);
     }
-    if (scrollY > 1200 && scrollY < 2000) {
+    if (scrollY > 1450 && scrollY < 2650) {
       setActiveLink(sidebarMenuLinks[3]);
     }
-    if (scrollY > 2000) {
+    if (scrollY > 2650) {
       setActiveLink(sidebarMenuLinks[4]);
     }
   }, [scrollY]);
