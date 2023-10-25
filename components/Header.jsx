@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "@/redux/useMenuSlice";
 import { socialData } from "@/constants/socialData";
+import toast from "react-hot-toast";
 
 const Header = () => {
   const { isOpen } = useSelector((store) => store.menuStore);
@@ -19,6 +20,41 @@ const Header = () => {
       damping: 15,
     },
     whileHover: { scale: 1.1 },
+  };
+
+  const downloadResume = async () => {
+    try {
+      // 파일 다운로드 중
+      toast.loading("이력서를 다운로드 중입니다...");
+
+      const response = await fetch(
+        "https://port-0-portfolio-next13-12fhqa2blnxd6ofg.sel5.cloudtype.app/download-resume",
+        {
+          method: "GET",
+        }
+      );
+
+      if (response.ok) {
+        toast.dismiss();
+        // 다운로드 완료
+        toast.success("다운로드가 완료되었습니다.");
+
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "resume.pdf";
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+      } else {
+        // 파일 다운로드 중 오류가 발생한 경우
+        toast.error("다운로드 중 에러가 발생하였습니다.");
+      }
+    } catch (error) {
+      console.error("오류 발생:", error);
+      toast.error("다운로드 중 에러가 발생하였습니다.");
+    }
   };
 
   return (
@@ -75,8 +111,7 @@ const Header = () => {
               </motion.a>
             </div>
           </div>
-          <motion.a
-            href="../assets/resume.pdf"
+          <motion.div
             initial={{ x: 300 }}
             animate={{ x: 0 }}
             transition={{
@@ -88,10 +123,10 @@ const Header = () => {
             whileHover={{ scale: 1.1 }}
             target="_blank"
             className="bg-dark-red text-white px-4 py-1 rounded-md hover:bg-light-red flex gap-2 font-bold"
-            download
+            onClick={downloadResume}
           >
             <HiOutlineDownload size={"22px"} /> Download RESUME
-          </motion.a>
+          </motion.div>
         </div>
       </div>
     </header>

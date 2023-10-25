@@ -239,12 +239,14 @@ export const projects = [
       <br />
       <span class="p-2 m-1">
         　- nodemailer를 활용하여 메일 전송 기능 구현
-        <br />
-      </span>
+      </span><br />
+      <span class="p-2 m-1">        
+        　- 이력서 pdf 다운로드 기능 구현        
+      </span><br />
       <span class="p-2 m-1">(5) toast 기능 구현</span>
       <br />
       <span class="p-2 m-1">
-        　- 메일 전송관련 loading, 성공, 실패 여부 toast 구현
+        　- 메일 전송, 이력서 다운로드 관련 loading, 성공, 실패 여부 toast 구현
         <br />
       </span>
     </div>
