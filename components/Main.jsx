@@ -66,6 +66,9 @@ const Main = () => {
           height={400}
           alt="profile"
           className="z-10 rounded-xl"
+          loading="eager"
+          placeholder="blur"
+          blurDataURL="/assets/blurImage.png"
         />
       </div>
       {/*Main 부분 배경 도형 렌더링을 위한 요소*/}
