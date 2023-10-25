@@ -21,7 +21,7 @@ const Skills = () => {
           <motion.div
             initial={{ x: "-20vw" }}
             animate={{ x: isInView2 ? 0 : "-20vw" }}
-            transition={{ duration: 0.6 + (idx * 1.5) / 10 }}
+            transition={{ duration: 0.6 + (idx * 3) / 10 }}
             key={idx}
             className="px-5 py-5 max-xs:px-[20px]"
           >
