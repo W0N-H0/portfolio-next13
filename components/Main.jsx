@@ -33,7 +33,7 @@ const Main = () => {
                 width={80}
                 height={70}
                 alt="koreaflag"
-                className="z-10 ml-4 xl:pt-1 "
+                className="z-10 ml-4 xl:pt-1"
               />
             </div>
             <p className="mt-5 text-xl">
@@ -73,6 +73,7 @@ const Main = () => {
       </div>
       {/*Main 부분 배경 도형 렌더링을 위한 요소*/}
       <ul className="bg-squares">
+        <li></li>
         <li></li>
         <li></li>
         <li></li>
