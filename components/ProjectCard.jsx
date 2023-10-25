@@ -8,6 +8,7 @@ import {
 } from "react-icons/ai";
 import { GoEyeClosed } from "react-icons/go";
 import { TbBrandYoutubeFilled } from "react-icons/tb";
+import Image from "next/image";
 
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
@@ -26,6 +27,9 @@ const ProjectCard = ({
   const ref = useRef(null);
   const isInView = useInView(ref);
   const [showDetail, setShowDetail] = useState(false);
+  // 문자열에서 특정 주소 부분 추출
+  // "assets/projects/BiBi2.png"에서 "assets/projects/" 다음의 부분을 추출 Image 태그를 사용하기 위함
+  const imagePath = image.split("assets/projects/")[1];
 
   const handleShowDetail = () => {
     setShowDetail(!showDetail);
@@ -48,12 +52,13 @@ const ProjectCard = ({
       transition={{ duration: 0.5 }}
       className="flex flex-col mb-6 p-4 border border-gray-200 rounded-lg shadow-md bg-light-bg z-1"
     >
-      <div className="w-full h-[86%] rounded-md shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
-        <img
-          src={image}
+      <div className="rounded-md shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+        <Image
+          src={`/assets/projects/${imagePath}`}
           alt={`${name} Image`}
           className="rounded-md"
-          style={{ objectFit: "fill" }}
+          height={800}
+          width={1400}
         />
       </div>
       <h3 className="my-4 text-dark-blue font-bold text-xl">{` ${order}. ${name}`}</h3>
