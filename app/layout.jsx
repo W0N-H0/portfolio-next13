@@ -56,7 +56,7 @@ export default function RootLayout({ children }) {
   }, []);
 
   return (
-    <html>
+    <html lang="ko">
       <body className={font.className}>
         <Provider store={store}>
           <Toaster />
