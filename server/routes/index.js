@@ -16,7 +16,7 @@ router.get("/download-resume", async (req, res) => {
   try {
     // 원격 파일의 URL(resume 저장공간)
     const fileUrl =
-      "https://blog.kakaocdn.net/dn/brOMZ1/btszbgaGcg3/qTfCkX7lzF3LoLkTTbfuZ1/resume.pdf?attach=1&knm=tfile.pdf";
+      "https://blog.kakaocdn.net/dn/dHfp5n/btszbM9gdqx/4UjsXQUlbTYZegUTW4bGi0/resume.pdf?attach=1&knm=tfile.pdf";
 
     // 파일 다운로드
     const response = await axios.get(fileUrl, { responseType: "stream" });
