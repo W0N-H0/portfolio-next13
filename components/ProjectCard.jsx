@@ -50,7 +50,7 @@ const ProjectCard = ({
       initial={{ y: "-10vh" }}
       animate={{ y: isInView ? 0 : "-10vh" }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col mb-6 p-4 border border-gray-200 rounded-lg shadow-md bg-light-bg z-1"
+      className="flex flex-col mb-6 p-4 border border-gray-200 rounded-lg shadow-md bg-light-bg z-1 "
     >
       <div className="rounded-md shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
         <Image
@@ -62,8 +62,10 @@ const ProjectCard = ({
           quality={100}
         />
       </div>
-      <h3 className="my-4 text-dark-blue font-bold text-xl">{` ${order}. ${name}`}</h3>
-      <div className="mb-2" dangerouslySetInnerHTML={{ __html: body }}></div>
+      <div className=" text-[1.1em]">
+        <h3 className="my-4 text-dark-blue font-bold text-xl">{` ${order}. ${name}`}</h3>
+        <div className="mb-2" dangerouslySetInnerHTML={{ __html: body }}></div>
+      </div>
       <motion.button
         {...hoverMotion}
         whileHover={{ ...hoverMotion.whileHover, scale: 1.1 }}
@@ -90,6 +92,7 @@ const ProjectCard = ({
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
+            className=" text-[1.1em]"
           >
             <div
               className="border-[2px] rounded-md shadow-sm"

@@ -1,5 +1,183 @@
 export const projects = [
   {
+    image: "../assets/projects/topgame.jpg",
+    name: "탑개미자원 업체 홍보 웹",
+    description: "Next14",
+    githubUrl: "https://github.com/W0N-H0/TopGame-Web",
+    deployUrl: "https://탑개미자원.com",
+    skills: [
+      "개인 프로젝트",
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Zustand",
+      "GitHub",
+      "MongoDB",
+      "MongoDBAtlas",
+      "Vercel",
+      ,
+    ],
+    body: `<span class="p-2"> 웹 개발 의뢰를 받아 진행한 회사소개 웹사이트 제작 프로젝트입니다. </span>`,
+    detail: `
+    <div class="p-4">
+    <div class="mb-3">
+      <h1>▷ 프로젝트 소개</h1>
+      <span class="p-2">
+        - 업체 홍보를 위한 웹 사이트 제작을 의뢰 받아 진행하였으며, 업체 홍보라는 특성을 반영하여 엔진 최적화(SEO)를 고려해야 했습니다.
+      </span>
+      <br />
+      <span class="p-2">
+        - Server-Side Rendering(SSR)을 통한 검색 엔진 최적화(SEO)의 장점을
+        살리고자 Next.js 프레임워크를 사용하였습니다.
+      </span>
+      <br />
+      <span class="p-2">
+        - 이를 통해 SEO 성능을 개선하고 React의 단점인 크롤링 불가능한
+        측면을 보완하고자 하였습니다.
+      </span>
+      <br />
+    </div>
+
+    <div class="mb-3">
+      <h1>▷ 개발기간</h1>
+      <span class="p-2"> 2023.11.6 ~ 11.21 </span>
+    </div>
+
+    <div class="mb-3">
+      <h1>▷ 주요 기능</h1>
+      <span class="p-2 m-1">
+        (1) 서버리스 함수(Serverless Function)를 이용하여 API 라우팅 구현
+      </span>
+      <br/>
+      <span class="p-2 m-1">
+        　- 상담리스트 데이터에 대한 CRUD 작업 구현(GET, POST, PATCH, DELETE)
+        <br />
+      </span>
+      <span class="p-2 m-1">
+        　- GET: 상담리스트 데이터 조회 
+        <br />
+      </span>
+      <span class="p-2 m-1">
+      　- POST: 상담리스트 등록
+        <br />
+      </span>
+      <span class="p-2 m-1">
+      　- PATCH: 상담 완료여부 등록
+        <br />
+      </span>
+      <span class="p-2 m-1">
+      　- DELETE: 개별 상담 삭제
+        <br />
+      </span>
+      <span class="p-2 m-1">
+      　- 관리자 로그인, 로그아웃 라우팅 구현
+        <br />
+      </span>
+      <span class="p-2 m-1">
+      　- 쿠키 방식으로 인가(Authorization) 구현
+        <br />
+      </span>
+
+      <span class="p-2 m-1">
+      (2) MongoDBAtlas를 통한 클라우드 DB구축
+      </span>
+      <br/>
+      <span class="p-2 m-1">
+        　- API 요청시 처리한 데이터를 MongoDBAtlas DB에 저장
+        <br />
+      </span>
+
+      <span class="p-2 m-1">
+      (3) 온라인 간편 상담 기능 구현
+      </span>
+      <br/>
+      <span class="p-2 m-1">
+        　- 상담 정보 입력 및 개인정보제공 동의 후 온라인 상담 신청 가능
+        <br />
+      </span>
+      <span class="p-2 m-1">
+        　- 상담신청 진행현황을 통해 상담신청 내용 및 진행 여부 파악 가능
+        <br />
+      </span>
+
+      <span class="p-2 m-1">
+      (4) 관리자 페이지 구현
+      </span>
+      <br/>
+      <span class="p-2 m-1">
+        　- 관리자 계정에 대한 정보는 DB에 저장하는 것이 아닌, 환경변수로 저장 후 서버에서 확인 후 인증처리
+        <br />
+      </span>
+      <span class="p-2 m-1">
+        　- 관리자 계정 로그인 시, 전체 상담 데이터에 대한 접근이 가능하도록 구현
+        <br />
+      </span>
+      <span class="p-2 m-1">
+        　- 관리자 페이지에서, 개별 상담의 삭제처리 및 상담 완료처리 기능 구현
+        <br />
+      </span>
+      <span class="p-2 m-1">
+        　- 관리자 권한이 필요한 요청(PATCH, DELETE)은 쿠키를 통해 인가 처리
+        <br />
+      </span>
+      
+
+      <span class="p-2 m-1">
+        (5) 다양한 라이브러리(swiper, framer-motion)를 활용하여
+        각종 애니메이션 효과 구현
+      </span>
+      <br />
+      <span class="p-2 m-1">
+        　- 초기 렌더링 시 부드러운 애니메이션 효과 구현
+        <br />
+      </span>
+      <span class="p-2 m-1">
+        　- 버튼, 메뉴 렌더링 및 hover시 애니메이션 효과 구현
+        <br />
+      </span>
+      <span class="p-2 m-1">
+        　- Section 이동 시 부드럽게 로딩 되는 효과 구현
+        <br />
+      </span>
+      <span class="p-2 m-1">
+        　- 상담 리스트 캐러셀 구현
+        <br />
+      </span>
+      <span class="p-2 m-1">
+        (6) 반응형 웹사이트 구현(PC, 테블릿, 모바일)
+      </span>
+      <br />
+      <span class="p-2 m-1">
+        (7) Zustand을 활용한 전역변수 관리</span>
+      <br />
+     
+    </div>
+
+    <div class="mb-3">
+      <h1>▷ 트러블 슈팅 & 최적화</h1>
+      <a
+        href="https://215-coding.tistory.com/53"
+        class="p-2 cursor-pointer text-dark-blue underline font-bold"
+      >
+        - Next.js 사용 중 Prettier format on save 기능이 갑자기 느려졌다.
+      </a>
+      <br />
+      <a href="" class="p-2 text-dark-blue ">
+        - Image 태그를 통한 이미지 최적화
+      </a>
+      <br />
+    </div>
+
+    <div class="mb-1">
+      <h1>▷ 배포 과정</h1>
+      <span class="p-2">- 클라이언트 : vercel</span>
+      <br />
+      <span class="p-2"> - 서버 : cloudtype</span> <br />
+    </div>
+  </div>
+    `,
+  },
+  {
     image: "../assets/projects/BiBi2.png",
     name: "삐삐 (BIBI .Best interior)",
     description: "인테리어 정보 공유 커뮤니티",
@@ -193,8 +371,8 @@ export const projects = [
       </span>
       <br />
       <span class="p-2">
-        - Next.js 13을 통해 SEO 성능을 개선하고 React의 단점인 크롤링 불가능한
-        측면을 보완해보고자 하였습니다
+        - 이를 통해 SEO 성능을 개선하고 React의 단점인 크롤링 불가능한
+        측면을 보완해보고자 하였습니다.
       </span>
       <br />
     </div>
