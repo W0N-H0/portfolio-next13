@@ -13,7 +13,7 @@ export const projects = [
       "Zustand",
       "GitHub",
       "MongoDB",
-      "MongoDBAtlas",
+      "MongoDB Atlas",
       "Vercel",
       ,
     ],
@@ -23,7 +23,7 @@ export const projects = [
     <div class="mb-3">
       <h1>▷ 프로젝트 소개</h1>
       <span class="p-2">
-        - 업체 홍보를 위한 웹 사이트 제작을 의뢰 받아 진행하였으며, 업체 홍보라는 특성을 반영하여 엔진 최적화(SEO)를 고려해야 했습니다.
+        - 업체 홍보를 위한 웹 사이트 제작을 의뢰 받아 진행하였으며, 업체 홍보라는 특성을 반영하여 엔진 최적화(SEO)를 고려하였습니다.
       </span>
       <br />
       <span class="p-2">
@@ -33,14 +33,14 @@ export const projects = [
       <br />
       <span class="p-2">
         - 이를 통해 SEO 성능을 개선하고 React의 단점인 크롤링 불가능한
-        측면을 보완하고자 하였습니다.
+        측면을 보완하였습니다.
       </span>
       <br />
     </div>
 
     <div class="mb-3">
       <h1>▷ 개발기간</h1>
-      <span class="p-2"> 2023.11.6 ~ 11.21 </span>
+      <span class="p-2"> 2023.11.6 ~ 2023.11.21 </span>
     </div>
 
     <div class="mb-3">
@@ -79,11 +79,11 @@ export const projects = [
       </span>
 
       <span class="p-2 m-1">
-      (2) MongoDBAtlas를 통한 클라우드 DB구축
+      (2) MongoDB Atlas를 통한 클라우드 DB구축
       </span>
       <br/>
       <span class="p-2 m-1">
-        　- API 요청시 처리한 데이터를 MongoDBAtlas DB에 저장
+        　- API 요청시 처리한 데이터를 MongoDB Atlas DB에 저장
         <br />
       </span>
 
@@ -150,16 +150,23 @@ export const projects = [
       <span class="p-2 m-1">
         (7) Zustand을 활용한 전역변수 관리</span>
       <br />
-     
+      <span class="p-2 m-1">(8) toast 기능 구현</span>
+      <br />
+      <span class="p-2 m-1">
+        　- 주소 복사, 상담문의 필수 입력값 유효성검사, 상담 신청 성공, 실패 여부 toast 구현
+        <br />
+      </span>
+    
     </div>
 
     <div class="mb-3">
       <h1>▷ 트러블 슈팅 & 최적화</h1>
       <a
-        href="https://215-coding.tistory.com/53"
+        href="https://215-coding.tistory.com/55"
+        target="_blank"
         class="p-2 cursor-pointer text-dark-blue underline font-bold"
       >
-        - Next.js 사용 중 Prettier format on save 기능이 갑자기 느려졌다.
+        - vercerl에서 한글 도메인을 등록할 수 있을까?
       </a>
       <br />
       <a href="" class="p-2 text-dark-blue ">
@@ -170,9 +177,26 @@ export const projects = [
 
     <div class="mb-1">
       <h1>▷ 배포 과정</h1>
-      <span class="p-2">- 클라이언트 : vercel</span>
-      <br />
-      <span class="p-2"> - 서버 : cloudtype</span> <br />
+      <span class="p-2">(1) 클라이언트 </span> <br />      
+      <span class="p-2">
+        - 호스팅케이알 에서 도메인 구매 및 vercel 웹호스팅 주소로 연결        
+      </span><br />
+      <span class="p-2">
+      - 한글 도메인을 퓨니코드(puny) 도메인으로 변경 후, vercel 에서 배포 인스턴스 생성          
+      </span><br />
+
+      <a
+        href="https://탑개미자원.com"
+        target="_blank"
+        class="p-2 cursor-pointer text-dark-blue underline font-bold"
+      >
+      - 배포 주소: 탑개미자원.com  
+      </a><br />
+
+      <span class="p-2">(2) 데이터베이스</span> <br />
+      <span class="p-2">
+        - 클라우드 데이터베이스 서비스인 MongoDB Atlas를 이용하여 데이터베이스 구축        
+      </span><br />
     </div>
   </div>
     `,
@@ -284,6 +308,7 @@ export const projects = [
       <h1>▷ 트러블 슈팅 & 최적화</h1>
       <a
         href="https://215-coding.tistory.com/41"
+        target="_blank"
         class="p-2 cursor-pointer text-dark-blue underline font-bold"
       >
         - [AWS S3] 클라이언트 배포 시 404 에러
@@ -291,6 +316,7 @@ export const projects = [
       <br />
       <a
         href="https://215-coding.tistory.com/42"
+        target="_blank"
         class="p-2 cursor-pointer text-dark-blue underline font-bold"
       >
         - [JWT] 토큰 인가 및 토큰 재발급 관련 트러블슈팅
@@ -298,6 +324,7 @@ export const projects = [
       <br />
       <a
         href="https://215-coding.tistory.com/48"
+        target="_blank"
         class="p-2 cursor-pointer text-dark-blue underline font-bold"
       >
         - [최적화] Pagenation 구현, 정적리소스 서버 구축
@@ -433,6 +460,7 @@ export const projects = [
       <h1>▷ 트러블 슈팅 & 최적화</h1>
       <a
         href="https://215-coding.tistory.com/53"
+        target="_blank"
         class="p-2 cursor-pointer text-dark-blue underline font-bold"
       >
         - Next.js 사용 중 Prettier format on save 기능이 갑자기 느려졌다.
@@ -520,6 +548,7 @@ export const projects = [
         <h1>▷ 트러블 슈팅</h1>
         <a
           href="https://215-coding.tistory.com/51"
+          target="_blank"
           class="p-2 cursor-pointer text-dark-blue underline font-bold"
         >
           - 점메추 프로젝트 배포관련 트러블 슈팅(Feat. vercel, cloudtype)

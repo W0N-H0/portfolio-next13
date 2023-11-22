@@ -13,7 +13,7 @@ const About = () => {
 
   return (
     <section
-      className="w-full h-fit px-[40px] py-10 max-xs:px-[20px] relative bg-white"
+      className="w-full h-fit px-[40px] py-10 xs:px-[20px] relative bg-white"
       id="about"
     >
       <div className="max-w-[1240px] mx-auto">
@@ -21,12 +21,12 @@ const About = () => {
         <div className="mt-7">
           <motion.div
             ref={ref}
-            className="mt-6 text-gray-800 text-[16px] leading-10 text-justify font-bold"
+            className="mt-6 text-gray-800 text-[14px] xs:text-[16px] leading-10 text-justify font-bold"
             initial={{ x: "-20vw" }}
             animate={{ x: isInView ? 0 : "-20vw" }}
             transition={{ duration: 1 }}
           >
-            <p className="text-[20px] mb-2">
+            <p className="font-bold text-[17px] xs:text-[20px] mb-2">
               안녕하세요! 주도적인 자세로 문제를 해결해 나가는 프론트엔드 개발자
               <span className=" ml-2">이원호</span>
               입니다.

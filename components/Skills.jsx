@@ -44,10 +44,9 @@ const Skills = () => {
                     <Image
                       src={item.src}
                       alt={item.title}
-                      className="rounded-md"
+                      className="rounded-md min-h-[60px]"
                       width={60}
                       height={60}
-                      sizes="(min-width: 60px)"
                     />
                   ) : (
                     <item.icon

@@ -5,6 +5,7 @@ import {
   BiLogoNodejs,
   BiLogoRedux,
   BiLogoTailwindCss,
+  BiLogoTypescript,
 } from "react-icons/bi";
 import { AiFillGithub, AiFillHtml5 } from "react-icons/ai";
 import { FiFigma } from "react-icons/fi";
@@ -13,6 +14,7 @@ import {
   SiReactquery,
   SiStyledcomponents,
   SiPreact,
+  SiMongodb,
 } from "react-icons/si";
 import { BiLogoAws } from "react-icons/bi";
 import { TbBrandNextjs } from "react-icons/tb";
@@ -30,6 +32,12 @@ export const skills = [
         color: "#fcd34d",
         icon: BiLogoJavascript,
         title: "JavaScript",
+      },
+      {
+        id: v4(),
+        color: "#3b82f6",
+        icon: BiLogoTypescript,
+        title: "TypeScript",
       },
     ],
   },
@@ -49,6 +57,12 @@ export const skills = [
       { id: v4(), color: "#764abc", icon: BiLogoRedux, title: "Redux" },
       { id: v4(), color: "#764abc", icon: BiLogoRedux, title: "Redux Toolkit" },
       { id: v4(), color: "#3b82f6", icon: SiPreact, title: "Context API" },
+      {
+        id: v4(),
+        color: "#facc15",
+        title: "Zustand",
+        src: "/assets/zustand.png",
+      },
     ],
   },
   {
@@ -76,6 +90,7 @@ export const skills = [
       { id: v4(), color: "#0a0a0a", icon: AiFillGithub, title: "Git" },
       { id: v4(), color: "#84cc16", icon: BiLogoAws, title: "AWS" },
       { id: v4(), color: "black", icon: CgVercel, title: "Vercel" },
+      { id: v4(), color: "green", icon: SiMongodb, title: "MongoDB" },
     ],
   },
 ];
