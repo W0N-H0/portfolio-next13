@@ -19,7 +19,7 @@ export const socialData = [
   {
     type: "github",
     icon: <AiFillGithub />,
-    url: "https://github.com/WONHO22",
+    url: "https://github.com/W0N-H0",
     description: "GitHub",
     duration: 0.75,
   },
