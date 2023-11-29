@@ -371,7 +371,7 @@ export const projects = [
   },
   {
     image: "../assets/projects/portfolio.png",
-    name: "Portfolio verson.1",
+    name: "Portfolio verson.2",
     description: "Nex13을 이용하여 만든 포트폴리오",
     githubUrl: "https://github.com/WONHO22/portfolio-next13",
     deployUrl: "https://portfolio-next13-mu.vercel.app/",
@@ -406,7 +406,8 @@ export const projects = [
 
     <div class="mb-3">
       <h1>▷ 개발기간</h1>
-      <span class="p-2"> 2023.10.18 ~ 진행중 </span>
+      <span class="p-2"> - Version1: 2023.10.18 ~ 2023.10.26 </span><br/>
+      <span class="p-2"> - Version2: 2023.11.22 ~ 업데이트 중 </span>
     </div>
 
     <div class="mb-3">
